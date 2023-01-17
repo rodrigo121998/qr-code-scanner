@@ -46,7 +46,7 @@ docker run -p 8000:8000 <username>/qr-code-scanner
 3. Haz click en cargar imagen
 4. La aplicación mostrará la imagen cargada a la izquierda y a la derecha la imagen con el qr detectado en un recuadro y el texto del qr
 ## Archivos incluidos
-* main.py: contiene el detector y lector del qr
+* src/main.py: contiene el detector y lector del qr
 * index.py: contiene el codigo de flask
 * templates/index.html: contiene el frontend de la aplicación
 
