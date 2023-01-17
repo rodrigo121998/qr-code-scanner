@@ -37,6 +37,8 @@ docker run -p 8000:8000 qr-code-scanner
 docker run -p 8000:8000 <username>/qr-code-scanner
 ```
 5. Accede a la aplicación en tu navegador en la dirección http://localhost:8000
+![image](https://user-images.githubusercontent.com/66456730/212816296-b5d6e1b9-63e8-4edc-ba29-57f9619148be.png)
+
 
 ## Uso de la aplicación
 1. Accede a la aplicación en tu navegador en la dirección http://localhost:8000
