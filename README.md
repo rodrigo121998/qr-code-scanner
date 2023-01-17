@@ -23,7 +23,7 @@ docker build -t qr-code-scanner .
 
  *Si no se puede ejecutar el comando docker build -t qr-code-scanner . debido a problemas con permisos o conexión a internet, se puede descargar la imagen de Docker desde Docker Hub ejecutando el siguiente comando:*
  ```
- docker pull <username>/qr-code-scanner:latest
+ docker pull rosorio121998/qr-code-scanner:latest
  ```
  <br>
 4. Ejecuta el contenedor con el siguiente comando
@@ -34,7 +34,7 @@ docker run -p 8000:8000 qr-code-scanner
 
 *Si descargaste la imagen de Docker Hub:*
 ```
-docker run -p 8000:8000 <username>/qr-code-scanner
+docker run -p 8000:8000 rosorio121998/qr-code-scanner
 ```
 5. Accede a la aplicación en tu navegador en la dirección http://localhost:8000
 ![image](https://user-images.githubusercontent.com/66456730/212816296-b5d6e1b9-63e8-4edc-ba29-57f9619148be.png)
