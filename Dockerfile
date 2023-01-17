@@ -1,20 +1,21 @@
-# Utilizamos una imagen de python como base
-FROM python:3.7.7
+# Usa una imagen base de Ubuntu 22.04
+FROM ubuntu:22.04
 
-# Establecemos el directorio de trabajo
+# Actualiza los paquetes del sistema y actualiza
+RUN apt-get update && apt-get -y upgrade
+
+# Instala las dependencias necesarias para tu aplicación
+RUN apt-get install -y python3-pip python3-dev build-essential libglib2.0-0 libsm6 libxext6 libxrender-dev
+
+# Crea un directorio para tu aplicación y copia los archivos necesarios dentro de él
+RUN mkdir /app
+COPY . /app
+
+# Cambia el directorio a /app
 WORKDIR /app
 
-# Copiamos los archivos necesarios
-COPY requirements.txt .
-COPY src/main.py src/
-COPY index.py src/
-COPY templates/ templates/
+# Instala las dependencias de Python
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-# Instalamos las dependencias
-RUN pip install -r requirements.txt --user
-
-# Exponemos el puerto
-EXPOSE 5000
-
-# Ejecutamos la aplicación
-CMD ["python", "src/index.py"]
+# Ejecuta tu aplicación
+CMD ["python3", "index.py"]
