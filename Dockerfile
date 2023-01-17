@@ -2,11 +2,11 @@
 FROM ubuntu:22.04
 
 # Actualiza los paquetes del sistema y actualiza
-RUN sudo apt-get update && apt-get -y upgrade
+RUN apt-get update && apt-get -y upgrade
 
 # Instala las dependencias necesarias para tu aplicación
-RUN sudo apt-get install -y libgl1-mesa-glx libgl1-mesa-dev
-RUN sudo apt-get install -y python3-pip python3-dev build-essential libglib2.0-0 libsm6 libxext6 libxrender-dev
+RUN apt-get install -y libgl1-mesa-glx libgl1-mesa-dev
+RUN apt-get install -y python3-pip python3-dev build-essential libglib2.0-0 libsm6 libxext6 libxrender-dev
 
 # Crea un directorio para tu aplicación y copia los archivos necesarios dentro de él
 RUN mkdir /app
